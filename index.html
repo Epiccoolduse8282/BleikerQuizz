@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bleiker Quizzen</title>
+<link rel="stylesheet" href="CSS/ohio.css">
+</head>
+<body>
+
+<div class="background"></div>
+<div class="overlay"></div>
+
+<nav>
+    <img src="Bilder/logo.png" alt="logo">
+    <div class="nav-links">
+        <a href="#home">Hjem</a>
+        <a href="#grafisk">Grafisk</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#video">Video</a>
+        <a href="#some">SoMe</a>
+    </div>
+</nav>
+
+<section id="home">
+    <div class="header-box">
+        <h1>Bleiker Quizzen</h1>
+        <h2>Velkommen til Bleiker Quizzen</h2>
+    </div>
+    <a href="#quiz" class="button">Start quizzen</a>
+</section>
+
+<section id="grafisk">
+    <h1>Grafisk profil</h1>
+    <h2 class="section-subtitle">Logo og typografi</h2>
+
+    <div class="profile-grid">
+        <div class="profile-card">
+            <h3>Logo</h3>
+            <img src="Bilder/logo.png" class="grafisk-img" alt="logo">
+        </div>
+
+        <div class="profile-card">
+            <h3>Typografi</h3>
+            <img src="Bilder/t.png" class="grafisk-img" alt="typografi">
+            <p>Logo: Arial Bold</p>
+            <p>Headinger: Arial Bold</p>
+            <p>Brødtekst: Arial Regular</p>
+        </div>
+    </div>
+</section>
+
+<section id="quiz">
+    <h1>Quiz</h1>
+    <h2 class="section-subtitle">Skriv navnet ditt, svar på spørsmålene og se om du kommer på highscore-lista.</h2>
+
+    <div class="quiz-layout">
+        <div>
+            <div class="quiz-panel">
+                <div class="quiz-topbar">
+                    <input id="playerName" class="name-input" type="text" placeholder="Skriv navnet ditt her" maxlength="24">
+                    <div class="score-badge" id="scoreBadge">Poeng: 0 / 10</div>
+                </div>
+                <div class="quiz-container" id="quizContainer"></div>
+            </div>
+
+            <div class="result-panel" id="resultPanel" style="display:none; margin-top:22px;">
+                <h3>Resultat</h3>
+                <div id="resultMessage" class="result-message"></div>
+                <button class="button" id="saveScoreBtn" type="button">Lagre poengsum</button>
+                <button class="button" id="restartBtn" type="button" style="margin-left:10px; background:#2a2a2a;">Prøv på nytt</button>
+                <div class="small-text">Poengsummen lagres i nettleseren på denne enheten.</div>
+            </div>
+        </div>
+
+        <div class="leaderboard-panel">
+            <h3>Highscore</h3>
+            <ol class="leaderboard-list" id="leaderboardList"></ol>
+            <div class="small-text">Topplisten oppdateres når noen lagrer resultatet sitt.</div>
+        </div>
+    </div>
+</section>
+
+<section id="video">
+    <div class="simple-card">
+        <h1>Video</h1>
+
+        <video controls width="100%">
+            <source src="Video/ohio.mp4" type="video/mp4">
+            Nettleseren din støtter ikke video.
+        </video>
+
+        <div class="video-quiz">
+            <h3>Spørsmål</h3>
+            <p>Hvorfor er påske knyttet til gult?</p>
+
+            <div class="video-answers">
+                <button onclick="checkVideoAnswer(this, true)">
+                    Det er symbol på vår, nytt liv og energi
+                </button>
+
+                <button onclick="checkVideoAnswer(this, false)">
+                    Siden gult er kult
+                </button>
+
+                <button onclick="checkVideoAnswer(this, false)">
+                    Jesus korsfestelse
+                </button>
+            </div>
+
+            <div id="videoResult" class="video-result"></div>
+        </div>
+
+    </div>
+</section>
+
+<section id="some">
+    <div class="simple-card">
+        <h1>SoMe</h1>
+        <h2>Sosiale medier / innhold</h2>
+      
+
+        <div class="image-row">
+            <img src="bilder/Annonse.png" alt="Annonse">
+            <img src="bilder/Annonse2.png" alt="Annonse 2">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p>Laget av Jonatan Sønderland Brekke</p>
+        <img src="Bilder/logo.png" alt="logo">
+        <p>Kontakt: <a href="mailto:jsb@gmail.com">jsb@gmail.com</a></p>
+    </div>
+</footer>
+
+<script src="JS/javascript.js"></script>
+<
