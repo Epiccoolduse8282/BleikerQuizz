@@ -140,6 +140,7 @@ function saveCurrentScore() {
 
     if (!name) {
         resultMessage.textContent = "Skriv inn navnet ditt."
+        playerNameInput.focus()
         return
     }
 
@@ -156,6 +157,7 @@ function saveCurrentScore() {
     scoreSaved = true
     saveScoreBtn.textContent = "Lagret!"
     saveScoreBtn.disabled = true
+    resultMessage.textContent = name + ", poengsummen din på " + currentScore + " av " + quizData.length + " er lagret."
 }
 
 function resetQuiz() {
@@ -240,7 +242,6 @@ playerNameInput.addEventListener("input", function () {
     }
 })
 
-/* VIDEO QUIZ */
 function checkVideoAnswer(btn, correct) {
     const buttons = btn.parentElement.querySelectorAll("button")
     const result = document.getElementById("videoResult")
